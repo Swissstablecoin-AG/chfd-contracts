@@ -1,0 +1,27 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.34"
+optimizer = true
+optimizer_runs = 200
+evm_version = "cancun"
+fs_permissions = [{ access = "read-write", path = "./out" }]
+
+[fmt]
+line_length = 100
+tab_width = 2
+bracket_spacing = true
+
+[lint]
+exclude_lints = ["asm-keccak256", "mixed-case-function"]
+
+[fuzz]
+runs = 10000
+
+[invariant]
+runs = 512
+depth = 64
+fail_on_revert = false
