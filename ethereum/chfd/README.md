@@ -2,7 +2,7 @@
 
 This directory contains the Ethereum implementation of the CHFD token system.
 
-The behavioral source of truth for this implementation is [SPEC.md](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/SPEC.md). This README follows the general structure used in `paxosglobal/pyusd-contract`, but the content below is specific to CHFD.
+The behavioral source of truth for this implementation is [SPEC.md](./SPEC.md). This README follows the general structure used in `paxosglobal/pyusd-contract`, but the content below is specific to CHFD.
 
 ## Overview
 
@@ -21,20 +21,20 @@ The system is designed for regulated issuance and movement of CHFD:
 
 Primary contracts:
 
-- [src/CHFD.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/CHFD.sol)
-- [src/CHFD_VASP.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/CHFD_VASP.sol)
+- [src/CHFD.sol](./src/CHFD.sol)
+- [src/CHFD_VASP.sol](./src/CHFD_VASP.sol)
 
 Supporting modules:
 
-- [src/Statuses.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/Statuses.sol)
-- [src/Events.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/Events.sol)
-- [src/Errors.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/Errors.sol)
-- [src/ICHFDVasp.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/ICHFDVasp.sol)
+- [src/Statuses.sol](./src/Statuses.sol)
+- [src/Events.sol](./src/Events.sol)
+- [src/Errors.sol](./src/Errors.sol)
+- [src/ICHFDVasp.sol](./src/ICHFDVasp.sol)
 
 Versioned upgrade targets in this repository:
 
-- [src/CHFD_V2.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/CHFD_V2.sol)
-- [src/CHFD_VASP_V2.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/CHFD_VASP_V2.sol)
+- [src/CHFD_V2.sol](./src/CHFD_V2.sol)
+- [src/CHFD_VASP_V2.sol](./src/CHFD_VASP_V2.sol)
 
 ## Token Properties
 
@@ -76,7 +76,7 @@ Each VASP maintains its own admin set inside `CHFD_VASP`.
 - holder balance limits
 - VASP-owned flag
 
-Normal transfers and mints are validated through `validateTransfer`, which enforces the rules described in [SPEC.md](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/SPEC.md).
+Normal transfers and mints are validated through `validateTransfer`, which enforces the rules described in [SPEC.md](./ethereum/chfd/SPEC.md).
 
 The Ethereum implementation also supports EIP-712 signature workflows for:
 
@@ -93,13 +93,13 @@ Both `CHFD` and `CHFD_VASP` use UUPS upgradeability and are intended to be deplo
 
 The repository includes:
 
-- the implementation contracts in [src](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src)
-- a deployment script in [script/DeployCHFD.s.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/script/DeployCHFD.s.sol)
-- upgrade tests in [test/CHFDUpgrade.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFDUpgrade.t.sol) and [test/CHFD_VASP_Upgrade.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFD_VASP_Upgrade.t.sol)
+- the implementation contracts in [src](./ethereum/chfd/src)
+- a deployment script in [script/DeployCHFD.s.sol](./script/DeployCHFD.s.sol)
+- upgrade tests in [test/CHFDUpgrade.t.sol](./test/CHFDUpgrade.t.sol) and [test/CHFD_VASP_Upgrade.t.sol](./test/CHFD_VASP_Upgrade.t.sol)
 
 ## Deployment
 
-The deployment flow in [script/DeployCHFD.s.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/script/DeployCHFD.s.sol) deploys:
+The deployment flow in [script/DeployCHFD.s.sol](./script/DeployCHFD.s.sol) deploys:
 
 1. `CHFD_VASP` implementation and proxy
 2. `CHFD` implementation and proxy, initialized with the VASP proxy address
@@ -117,7 +117,7 @@ Expected environment variables include:
 - `DEFAULT_ADMIN_ROLE_ADDRESS`
 - `DEFAULT_ADMIN_ROLE_FAILOVER_ADDRESS`
 
-Successful deployments write [out/deployment.json](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/out/deployment.json) when run locally.
+Successful deployments write [out/deployment.json](./out/deployment.json) when run locally.
 
 ## Development
 
@@ -140,11 +140,11 @@ forge test
 
 Useful test targets in this repository:
 
-- [test/CHFD.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFD.t.sol)
-- [test/CHFDFuzz.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFDFuzz.t.sol)
-- [test/CHFDInvariants.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFDInvariants.t.sol)
-- [test/CHFDUpgrade.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFDUpgrade.t.sol)
-- [test/CHFD_VASP_Upgrade.t.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/test/CHFD_VASP_Upgrade.t.sol)
+- [test/CHFD.t.sol](./test/CHFD.t.sol)
+- [test/CHFDFuzz.t.sol](./test/CHFDFuzz.t.sol)
+- [test/CHFDInvariants.t.sol](./test/CHFDInvariants.t.sol)
+- [test/CHFDUpgrade.t.sol](./test/CHFDUpgrade.t.sol)
+- [test/CHFD_VASP_Upgrade.t.sol](./test/CHFD_VASP_Upgrade.t.sol)
 
 ## Addresses and ABI
 
