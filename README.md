@@ -8,7 +8,7 @@ This repository contains the smart contract implementations for `CHFD` ("Swiss S
 The implementation specifications for the CHFD system are:
 
 - [https://github.com/Swissstablecoin-AG/chfd-contracts/ethereum/chfd/SPEC.md](chfd-contracts/ethereum/chfd/SPEC.md) for the EVM implementation
-- [stellar/chfd/SPEC.md](./chfd-contracts/stellar/chfd/SPEC.md) for the Soroban implementation
+- [../stellar/chfd/SPEC.md](./chfd-contracts/stellar/chfd/SPEC.md) for the Soroban implementation
 
 The READMEs in this repository summarize those specifications and point to the relevant implementation details.
 
