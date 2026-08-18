@@ -2,7 +2,7 @@
 
 This directory contains the Soroban implementation of the CHFD token system for Stellar.
 
-The canonical behavioral source of truth for this implementation is [SPEC.md](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/SPEC.md). This Stellar workspace applies the same compliance-first architecture using Soroban contracts, Soroban events, and Soroban-native upgrade flows.
+The canonical behavioral source of truth for this implementation is [SPEC.md](./SPEC.md). This Stellar workspace applies the same compliance-first architecture using Soroban contracts, Soroban events, and Soroban-native upgrade flows.
 
 ## Overview
 
@@ -27,9 +27,9 @@ stellar/chfd
 
 Primary sources:
 
-- [contracts/chfd/src/lib.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd/src/lib.rs)
-- [contracts/chfd-vasp/src/lib.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd-vasp/src/lib.rs)
-- [contracts/chfd-vasp-interface/src/lib.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd-vasp-interface/src/lib.rs)
+- [contracts/chfd/src/lib.rs](./contracts/chfd/src/lib.rs)
+- [contracts/chfd-vasp/src/lib.rs](./contracts/chfd-vasp/src/lib.rs)
+- [contracts/chfd-vasp-interface/src/lib.rs](./contracts/chfd-vasp-interface/src/lib.rs)
 
 ## Token Properties
 
@@ -130,7 +130,7 @@ Requirements:
 - Cargo
 - Soroban-compatible toolchain for build and deployment workflows
 
-From [stellar/chfd/Cargo.toml](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/Cargo.toml):
+From [stellar/chfd/Cargo.toml](./Cargo.toml):
 
 - workspace dependency: `soroban-sdk = 25.3.1`
 
@@ -148,8 +148,8 @@ cargo test
 
 Relevant test files:
 
-- [contracts/chfd/src/test.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd/src/test.rs)
-- [contracts/chfd-vasp/src/test.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd-vasp/src/test.rs)
+- [contracts/chfd/src/test.rs](./contracts/chfd/src/test.rs)
+- [contracts/chfd-vasp/src/test.rs](./contracts/chfd-vasp/src/test.rs)
 
 ## Addresses and Artifacts
 
