@@ -7,8 +7,8 @@ This repository contains the smart contract implementations for `CHFD` ("Swiss S
 
 The implementation specifications for the CHFD system are:
 
-- [https://github.com/Swissstablecoin-AG/chfd-contracts/ethereum/chfd/SPEC.md](chfd-contracts/ethereum/chfd/SPEC.md) for the EVM implementation
-- [../stellar/chfd/SPEC.md](./chfd-contracts/stellar/chfd/SPEC.md) for the Soroban implementation
+- [ethereum/chfd/SPEC.md](./ethereum/chfd/SPEC.md) for the EVM implementation
+- [stellar/chfd/SPEC.md](./stellar/chfd/SPEC.md) for the Soroban implementation
 
 The READMEs in this repository summarize those specifications and point to the relevant implementation details.
 
@@ -62,8 +62,8 @@ The EVM implementation uses Solidity `0.8.34`, OpenZeppelin upgradeable contract
 
 Main contracts:
 
-- [ethereum/chfd/src/CHFD.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/CHFD.sol)
-- [ethereum/chfd/src/CHFD_VASP.sol](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/src/CHFD_VASP.sol)
+- [ethereum/chfd/src/CHFD.sol](./ethereum/chfd/src/CHFD.sol)
+- [ethereum/chfd/src/CHFD_VASP.sol](./ethereum/chfd/src/CHFD_VASP.sol)
 
 Highlights:
 
@@ -72,7 +72,7 @@ Highlights:
 - ERC-20 permit support in `CHFD`
 - Foundry unit, fuzz, invariant, and upgrade tests
 
-See [ethereum/chfd/README.md](/Users/samkirton/Documents/repos/chfd-contracts/ethereum/chfd/README.md) for environment-specific details.
+See [ethereum/chfd/README.md](./ethereum/chfd/README.md) for environment-specific details.
 
 ### Stellar
 
@@ -80,9 +80,9 @@ The Stellar implementation uses Rust, Soroban SDK `25.3.1`, and a workspace cont
 
 Main contracts:
 
-- [stellar/chfd/contracts/chfd/src/lib.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd/src/lib.rs)
-- [stellar/chfd/contracts/chfd-vasp/src/lib.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd-vasp/src/lib.rs)
-- [stellar/chfd/contracts/chfd-vasp-interface/src/lib.rs](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/contracts/chfd-vasp-interface/src/lib.rs)
+- [stellar/chfd/contracts/chfd/src/lib.rs](./stellar/chfd/contracts/chfd/src/lib.rs)
+- [stellar/chfd/contracts/chfd-vasp/src/lib.rs](./stellar/chfd/contracts/chfd-vasp/src/lib.rs)
+- [stellar/chfd/contracts/chfd-vasp-interface/src/lib.rs](./stellar/chfd/contracts/chfd-vasp-interface/src/lib.rs)
 
 Highlights:
 
@@ -90,7 +90,7 @@ Highlights:
 - Soroban-native pause, upgrade, and event flows
 - shared interface types for transfer validation and registry lookups
 
-See [stellar/chfd/README.md](/Users/samkirton/Documents/repos/chfd-contracts/stellar/chfd/README.md) for workspace-specific details.
+See [stellar/chfd/README.md](./stellar/chfd/README.md) for workspace-specific details.
 
 ## Upgradeability
 
